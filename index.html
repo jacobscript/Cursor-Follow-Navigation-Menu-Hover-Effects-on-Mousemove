@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Cursor Follow Navigation Menu Hover Effects on Mousemove</title>
+    </head>
+
+    <body>
+        <ul>
+            <li>
+                <a href="#">Pepino</a
+                ><img class="image" src="images/Pepino_1.jpg" alt="Pepino" />
+            </li>
+            <li>
+                <a href="#">Physalis</a
+                ><img
+                    class="image"
+                    src="images/Physalis_1.jpg"
+                    alt="Physalis"
+                />
+            </li>
+            <li>
+                <a href="#">Buddha's Hand</a
+                ><img
+                    class="image"
+                    src="images/Buddhashand_1.jpg"
+                    alt="Buddha's Hand"
+                />
+            </li>
+            <li>
+                <a href="#">Kiwano</a
+                ><img class="image" src="images/Kiwano_1.jpg" alt="Kiwano" />
+            </li>
+            <li>
+                <a href="#">Rambutan</a
+                ><img
+                    class="image"
+                    src="images/Rambutan_1.jpg"
+                    alt="Rambutan"
+                />
+            </li>
+            <li>
+                <a href="#">Mangosteen</a
+                ><img
+                    class="image"
+                    src="images/Mangosteen_1.jpg"
+                    alt="Mangosteen"
+                />
+            </li>
+            <li>
+                <a href="#">Durian</a
+                ><img class="image" src="images/Durian_1.jpg" alt="Durian" />
+            </li>
+            <li>
+                <a href="#">Ackee</a
+                ><img class="image" src="images/Ackee_1.jpg" alt="Ackee" />
+            </li>
+        </ul>
+
+        <script>
+            let image = document.querySelectorAll('.image')
+
+            function showImage(e) {
+                for (var i = 0; i < image.length; i++) {
+                    x = e.pageX
+                    y = e.pageY
+                    image[i].style.transform = `translate(${x}px, ${y}px)`
+                }
+            }
+            document.addEventListener('mousemove', showImage)
+        </script>
+    </body>
+</html>
